@@ -25,6 +25,13 @@ export const metadata: Metadata = {
   keywords: ["EDF form", "Export Declaration Form", "Service Export India", "Freelance foreign payment", "SOFTEX alternative"],
   authors: [{ name: "ExportForm" }],
   manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: '/icon.png' },
+      { url: '/logo.png' }
+    ],
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: "ExportForm — EDF Generator",
     description: "Private browser-based PDF generator for Indian freelancers receiving foreign inward remittances.",
