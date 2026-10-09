@@ -15,7 +15,7 @@ export default function EDFFormPage() {
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground-secondary">
           <Link href="/about" className="hover:text-foreground transition-colors duration-200">About</Link>
           <Link href="/how-to-fill-edf-form" className="hover:text-foreground transition-colors duration-200">How to Fill</Link>
-          <Link href="/generator">
+          <Link href="/">
             <Button variant="outline" size="sm">Open Generator</Button>
           </Link>
         </nav>
@@ -35,7 +35,7 @@ export default function EDFFormPage() {
             <p className="text-foreground-secondary mb-8 max-w-xl mx-auto">
               Our tool runs 100% in your browser. No data is saved, uploaded, or stored in any database. It is completely private.
             </p>
-            <Link href="/generator">
+            <Link href="/">
               <Button size="lg" className="w-full sm:w-auto text-base">
                 Start the Generator &rarr;
               </Button>

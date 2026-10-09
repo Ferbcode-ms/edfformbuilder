@@ -14,7 +14,7 @@ export default function EDFForFreelancersPage() {
         <Link href="/" className="text-xl font-semibold tracking-tight text-foreground">ExportForm</Link>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground-secondary">
           <Link href="/edf-form" className="hover:text-foreground transition-colors duration-200">Main Guide</Link>
-          <Link href="/generator">
+          <Link href="/">
             <Button variant="outline" size="sm">Open Generator</Button>
           </Link>
         </nav>
@@ -48,7 +48,7 @@ export default function EDFForFreelancersPage() {
             <p className="text-foreground-secondary mb-6 text-base max-w-md mx-auto">
               Use our private, browser-based generator to prepare a professional draft document in exactly 2 minutes.
             </p>
-            <Link href="/generator">
+            <Link href="/">
               <Button>Generate your EDF document &rarr;</Button>
             </Link>
           </div>

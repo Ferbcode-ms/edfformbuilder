@@ -20,8 +20,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "ExportForm — Foreign Service Export Document Generator",
-  description: "Prepare foreign service export documents with a simple private browser-based PDF generator.",
+  title: "EDF Form Online for Indian Freelancers | ExportForm",
+  description: "Prepare your service export EDF online. A private browser-based PDF generator for Indian freelancers receiving foreign inward remittances.",
   keywords: ["EDF form", "Export Declaration Form", "Service Export India", "Freelance foreign payment", "SOFTEX alternative"],
   authors: [{ name: "ExportForm" }],
   manifest: "/manifest.json",

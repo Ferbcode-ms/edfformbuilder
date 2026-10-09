@@ -1,9 +1,44 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { GeneratorForm } from "@/components/forms/GeneratorForm";
 
 export default function Home() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://edfformbuilders.pages.dev/#website",
+        "url": "https://edfformbuilders.pages.dev/",
+        "name": "ExportForm",
+        "description": "Private browser-based PDF generator for Indian freelancers receiving foreign inward remittances.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ExportForm",
+          "url": "https://edfformbuilders.pages.dev"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://edfformbuilders.pages.dev/#software",
+        "name": "ExportForm EDF Generator",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        }
+      }
+    ]
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground font-sans selection:bg-accent/20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <header className="flex items-center justify-between px-6 py-6 md:px-12 md:py-8 max-w-7xl mx-auto w-full">
         <div className="text-xl font-semibold tracking-tight text-foreground">ExportForm</div>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground-secondary">
@@ -15,29 +50,19 @@ export default function Home() {
       <main className="flex-1 flex flex-col items-center justify-center px-6 py-24 md:py-32 text-center animate-in fade-in duration-700">
         <div className="max-w-3xl space-y-8">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-balance">
-            Export documents.<br />
-            <span className="text-foreground-secondary">Made simple.</span>
+            Prepare Your Service Export EDF Online
           </h1>
           
           <p className="text-xl md:text-2xl text-foreground-secondary max-w-2xl mx-auto text-balance font-light">
-            Prepare your foreign service export documents in minutes.
+            A private, browser-based EDF generator for Indian freelancers receiving foreign inward remittances.
           </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-            <Link href="/generator" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto text-base">
-                Create a document &rarr;
-              </Button>
-            </Link>
-            <Link href="#how-it-works" className="w-full sm:w-auto">
-              <Button variant="ghost" size="lg" className="w-full sm:w-auto text-base">
-                How it works
-              </Button>
-            </Link>
-          </div>
         </div>
 
-        <section id="how-it-works" aria-label="How it works" className="mt-32 md:mt-48 grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 max-w-5xl mx-auto text-left w-full px-4">
+        <div className="w-full max-w-4xl mt-12 mb-24">
+          <GeneratorForm />
+        </div>
+
+        <section id="how-it-works" aria-label="How it works" className="mt-16 md:mt-32 grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 max-w-5xl mx-auto text-left w-full px-4">
           <article className="space-y-4">
             <div className="text-sm font-semibold tracking-widest text-foreground-secondary mb-8" aria-hidden="true">01</div>
             <h2 className="text-2xl font-medium tracking-tight">Enter Details</h2>

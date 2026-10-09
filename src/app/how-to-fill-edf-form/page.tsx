@@ -14,7 +14,7 @@ export default function HowToFillPage() {
         <Link href="/" className="text-xl font-semibold tracking-tight text-foreground">ExportForm</Link>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground-secondary">
           <Link href="/edf-form" className="hover:text-foreground transition-colors duration-200">Main Guide</Link>
-          <Link href="/generator">
+          <Link href="/">
             <Button variant="outline" size="sm">Open Generator</Button>
           </Link>
         </nav>
@@ -70,7 +70,7 @@ export default function HowToFillPage() {
             <p className="text-foreground-secondary mb-6 text-base max-w-md mx-auto">
               Our generator walks you through these steps and produces a perfectly aligned PDF automatically.
             </p>
-            <Link href="/generator">
+            <Link href="/">
               <Button>Generate your EDF document &rarr;</Button>
             </Link>
           </div>

@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 
-Sitemap: https://exportform.com/sitemap.xml
+Sitemap: https://edfformbuilders.pages.dev/sitemap.xml
