@@ -139,9 +139,9 @@ export function GeneratorForm() {
   return (
     <div className="bg-background rounded-[2rem] md:p-10 p-6 md:border border-border/50 shadow-sm animate-in fade-in zoom-in-95 duration-500 max-w-4xl w-full mx-auto">
       <div className="mb-10">
-        <div className="flex items-center justify-between mb-2">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
           <h1 className="text-xl font-bold tracking-tight text-foreground">Export Document (Service)</h1>
-          <span className="text-sm font-medium text-foreground-secondary tracking-widest uppercase">
+          <span className="text-sm font-medium text-foreground-secondary tracking-widest uppercase shrink-0">
             {String(currentStep + 1).padStart(2, "0")} / {String(STEPS.length).padStart(2, "0")}
           </span>
         </div>
@@ -467,12 +467,12 @@ export function GeneratorForm() {
             <ReviewSection title="Service Exports" onEdit={() => setCurrentStep(1)}>
               <div className="space-y-4 mt-2">
                 {serviceEntries.map((entry, idx) => (
-                  <div key={entry.id} className="flex justify-between items-center py-2 border-b border-border/50 last:border-0">
-                    <div>
+                  <div key={entry.id} className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 border-b border-border/50 last:border-0 gap-2">
+                    <div className="min-w-0 pr-4">
                       <div className="font-medium text-sm">Entry {idx + 1}: {entry.invoiceNo}</div>
-                      <div className="text-sm text-foreground-secondary">{entry.recipientNameAddress}</div>
+                      <div className="text-sm text-foreground-secondary truncate sm:whitespace-normal">{entry.recipientNameAddress}</div>
                     </div>
-                    <div className="text-right">
+                    <div className="text-left sm:text-right shrink-0">
                       <div className="font-medium text-sm">{entry.currency} {entry.amount}</div>
                       <div className="text-xs text-foreground-secondary">{entry.date}</div>
                     </div>

@@ -59,16 +59,16 @@ export default function DocumentPreviewInner({ data, onEdit, onReset }: Document
           <p className="text-foreground-secondary mt-2 text-lg font-light">Review the document before submitting it to your authorised dealer bank.</p>
         </div>
         
-        <div className="flex flex-wrap items-center gap-3">
-          <Button variant="ghost" onClick={onEdit}>
+        <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 w-full md:w-auto">
+          <Button variant="ghost" onClick={onEdit} className="w-full sm:w-auto">
             &larr; Edit
           </Button>
 
-          <Button variant="ghost" onClick={() => setShowResetConfirm(true)}>
+          <Button variant="ghost" onClick={() => setShowResetConfirm(true)} className="w-full sm:w-auto">
             Start New
           </Button>
           
-          <div className="text-xs text-foreground-secondary ml-2 mr-4 hidden md:block">
+          <div className="text-xs text-foreground-secondary ml-0 sm:ml-2 mr-0 sm:mr-4 hidden md:block">
             Verify the completed form and submission requirements with your Authorised Dealer bank before filing.
           </div>
 
@@ -77,6 +77,7 @@ export default function DocumentPreviewInner({ data, onEdit, onReset }: Document
               <Button 
                 variant="secondary" 
                 disabled={loading || !url} 
+                className="w-full sm:w-auto"
                 onClick={() => {
                   if (url) {
                     const iframe = document.createElement('iframe');
@@ -92,9 +93,9 @@ export default function DocumentPreviewInner({ data, onEdit, onReset }: Document
             )}
           </BlobProvider>
 
-          <PDFDownloadLink document={<DocTemplate />} fileName={fileName}>
+          <PDFDownloadLink document={<DocTemplate />} fileName={fileName} className="w-full sm:w-auto flex">
             {({ loading }) => (
-              <Button disabled={loading} className="bg-accent text-white hover:bg-accent/90">
+              <Button disabled={loading} className="w-full sm:w-auto bg-accent text-white hover:bg-accent/90">
                 {loading ? "Preparing..." : "Download PDF"}
               </Button>
             )}
@@ -103,8 +104,8 @@ export default function DocumentPreviewInner({ data, onEdit, onReset }: Document
       </div>
 
       <ErrorBoundary onReset={onEdit}>
-        <div className="w-full h-[800px] border border-border/50 rounded-2xl overflow-hidden bg-background-secondary/30 relative shadow-inner">
-          <PDFViewer style={{ width: "100%", height: "100%", border: "none" }} showToolbar={false}>
+        <div className="w-full h-[500px] md:h-[800px] lg:h-[1000px] border border-border/50 rounded-2xl overflow-hidden bg-background-secondary/30 relative shadow-inner">
+          <PDFViewer style={{ width: "100%", height: "100%", border: "none" }}>
             <DocTemplate />
           </PDFViewer>
         </div>

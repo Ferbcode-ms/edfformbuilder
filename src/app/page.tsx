@@ -58,7 +58,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="w-full max-w-4xl mt-12 mb-24">
+        <div id="generator" className="w-full max-w-4xl mt-12 mb-24 px-2 sm:px-6 md:px-0 text-left">
           <GeneratorForm />
         </div>
 
