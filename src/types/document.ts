@@ -15,6 +15,7 @@ export interface ServiceExportEntry {
 }
 
 export interface GeneralInformation {
+  exportType: "Service" | "Software";
   formNo: string;
   exporterName: string;
   exporterAddress: string;
@@ -29,6 +30,9 @@ export interface GeneralInformation {
   modeOfRealisation: string;
   descriptionOfServices: string;
   totalServicesValueInWordsINR: string;
+  declarationDate: string;
+  realisationDueDate: string;
+  signatoryName: string;
 }
 
 export interface DocumentData {
